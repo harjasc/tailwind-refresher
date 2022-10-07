@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <meta charset='UTF-8' />
+    <meta http-equiv='X-UA-Compatible' content='IE=edge' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel='stylesheet' href='style.css' />
+</head>
+
+<body>
+    <!--    below large screens: padding 10,
+             large and above screens: padding 20 
+    -->
+    <div class='min-h-screen bg-blue-200 p-10 lg:p-20'>
+        <!--    extra-large screens and above: green, 
+                large screens: yellow, 
+                medium (big phones and tablets): red,
+                anything below medium: black 
+        -->
+        <h2 class='text-6xl text-black md:text-red-600 lg:text-yellow-600 xl:text-green-600'>Mobile First</h2>
+        <h2 class='text-3xl md:text-4xl lg:text-6xl'>Different sizes per device</h2>
+
+        <!-- Stacking vs side-by-side -->
+        <!--    On medium and above: apply flex (position side by side), 
+                and add 8 horizontal space between the child elements
+        -->
+        <div class='md:flex md:space-x-8'>
+            <!--    On medium and above: set width of individual box to 50% of the parent div, 
+            -->
+            <div class='md:w-1/2 p-10 bg-white mt-10'>On Mobile, we stack vertically</div>
+            <div class='md:w-1/2 p-10 bg-white mt-10'>On desktop, we position next to each other
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
